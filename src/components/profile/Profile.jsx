@@ -1,27 +1,28 @@
 import css from './Profile.module.css';
+import clsx from 'clsx';
 
 export default function Profile({ name, tag, location, image, stats }) {
   return (
-    <div>
+    <div className={css.profileCard}>
       <div>
-        <img src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>{tag}</p>
-        <p>{location}</p>
+        <img src={image} alt="User avatar" className={css.profilePicture} />
+        <p className={css.profileUserName}>{name}</p>
+        <p className={css.profilePersonalInfo}>@{tag}</p>
+        <p className={css.profilePersonalInfo}>{location}</p>
       </div>
 
-      <ul>
-        <li>
+      <ul className={css.userInfoBox}>
+        <li className={css.userInfoItem}>
           <span>Followers</span>
-          <span>{stats.followers}</span>
+          <span className={css.userStats}>{stats.followers}</span>
         </li>
-        <li>
+        <li className={clsx(css.userInfoItem, css.border)}>
           <span>Views</span>
-          <span>{stats.views}</span>
+          <span className={css.userStats}>{stats.views}</span>
         </li>
-        <li>
+        <li className={css.userInfoItem}>
           <span>Likes</span>
-          <span>{stats.likes}</span>
+          <span className={css.userStats}>{stats.likes}</span>
         </li>
       </ul>
     </div>

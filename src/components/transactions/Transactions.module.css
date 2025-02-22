@@ -1,0 +1,26 @@
+.transactionsTable {
+  width: 500px;
+  border: solid 1px;
+  border-collapse: collapse;
+}
+
+.tranTableHeader {
+  background-color: #333;
+  color: #fff;
+}
+
+.tranTableRowBorder {
+  border: 2px solid black;
+  padding: 8px 12px;
+  padding: 3px;
+}
+
+.tranTableColumnBorder {
+  border: 2px solid black;
+  padding: 8px 12px;
+  padding: 3px;
+}
+
+tr:nth-child(even) {
+  background-color: #d3cece;
+}
